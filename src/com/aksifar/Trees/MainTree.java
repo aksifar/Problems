@@ -6,13 +6,13 @@ public class MainTree {
  
 	public static void main(String[] args) {
 		
-		Tree A = new Tree(4);
-		Tree B = new Tree(5);
-		Tree C = new Tree(6);
+		Tree A = new Tree(1);
+		Tree B = new Tree(2);
+		Tree C = new Tree(3);
 		Tree D = new Tree(4);
-		Tree E = new Tree(1);
+		Tree E = new Tree(5);
 		Tree F = new Tree(6);
-		Tree G = new Tree(5);
+		Tree G = new Tree(7);
 		
 		
 		A.setLeft(B);
@@ -24,6 +24,10 @@ public class MainTree {
 		C.setLeft(E);
 		C.setRight(F);
 		
-		TreeUtil.inOrderTrversal(A);
+		TreeUtil.printInOrderTrversal(A);
+		System.out.println();
+		TreeUtil.printPreOrderTrversal(A);
+		System.out.println();
+		TreeUtil.printPostOrderTrversal(A);
 	}
 }
