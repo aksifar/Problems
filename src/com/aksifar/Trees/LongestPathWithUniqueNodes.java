@@ -13,22 +13,22 @@ public class LongestPathWithUniqueNodes {
 	//Stack is used to identify the last iteration of the recursion, so that +1 can be done for root node
 	private Stack<Integer> stack = new Stack<>(); 
 	
-    public int calulateLongestPath(Tree T) {
-    	if (T == null)
+    public int calulateLongestPath(Tree root) {
+    	if (root == null)
     		return 0;
     	
     	Set<Integer> set = new HashSet<>();
-    	stack.push(T.getData());
-    	set.add(T.getData());
+    	stack.push(root.getData());
+    	set.add(root.getData());
     	
-    	int left = calulateLongestPath(T.getLeft());
-    	int right = calulateLongestPath(T.getRight());
+    	int left = calulateLongestPath(root.getLeft());
+    	int right = calulateLongestPath(root.getRight());
     	
     	int leftSubTreeLongestPath=0, rightSubTreeLongestPath =0;
-    	if(T.getLeft() != null && set.add(T.getLeft().getData()))
+    	if(root.getLeft() != null && set.add(root.getLeft().getData()))
     		leftSubTreeLongestPath += left + 1;
     	
-    	if(T.getRight() != null && set.add(T.getRight().getData()))
+    	if(root.getRight() != null && set.add(root.getRight().getData()))
     		rightSubTreeLongestPath += right +1;
     	
     	stack.pop();

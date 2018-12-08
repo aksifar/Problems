@@ -1,6 +1,6 @@
 package com.aksifar.Trees;
 
-class Tree {
+public class Tree {
 	private int data;
 	private Tree left;
 	private Tree right;
@@ -32,5 +32,4 @@ class Tree {
 	public void setRight(Tree right) {
 		this.right = right;
 	}
-	
 }

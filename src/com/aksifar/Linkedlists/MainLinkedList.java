@@ -1,6 +1,6 @@
 package com.aksifar.Linkedlists;
 
-public class Main {
+public class MainLinkedList {
 
 	Node<Integer> n1 = new Node<>(1); 
 	Node<Integer> n2 = new Node<>(2); 
@@ -11,7 +11,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		Main obj = new Main();
+		MainLinkedList obj = new MainLinkedList();
 		obj.list = obj.createLinkedList();
 		
 		System.out.println(obj.list);
