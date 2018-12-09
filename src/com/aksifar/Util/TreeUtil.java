@@ -1,36 +1,60 @@
 package com.aksifar.Util;
 
-import com.aksifar.Trees.Tree;
+import java.util.LinkedList;
+import java.util.Queue;
+
+import com.aksifar.Trees.BinaryTreeNode;
 
 public final class TreeUtil {
 	
 	//To prevent instantiation of the class
 	private TreeUtil(){};
 	
-	public static void printInOrderTrversal(Tree root)
+	public static void printInOrderTraversal(BinaryTreeNode root)
 	{
 		if(root == null)
 			return;
-		printInOrderTrversal(root.getLeft());
+		printInOrderTraversal(root.getLeft());
 		System.out.print(" " + root.getData());
-		printInOrderTrversal(root.getRight());
+		printInOrderTraversal(root.getRight());
 	}
 	
-	public static void printPreOrderTrversal(Tree root)
+	public static void printPreOrderTraversal(BinaryTreeNode root)
 	{
 		if(root == null)
 			return;
 		System.out.print(" " + root.getData());
-		printPreOrderTrversal(root.getLeft());
-		printPreOrderTrversal(root.getRight());
+		printPreOrderTraversal(root.getLeft());
+		printPreOrderTraversal(root.getRight());
 	}
 	
-	public static void printPostOrderTrversal(Tree root)
+	public static void printPostOrderTraversal(BinaryTreeNode root)
 	{
 		if(root == null)
 			return;
-		printPostOrderTrversal(root.getLeft());
-		printPostOrderTrversal(root.getRight());
+		printPostOrderTraversal(root.getLeft());
+		printPostOrderTraversal(root.getRight());
 		System.out.print(" " + root.getData());
+	}
+	
+	public static void printLevelOrderTraversal(BinaryTreeNode root)
+	{
+		Queue<BinaryTreeNode> q = new LinkedList<>();
+		q.offer(root);
+		while(!q.isEmpty())
+		{	BinaryTreeNode current = q.poll();
+			System.out.print(" " + current.getData());
+			BinaryTreeNode left = current.getLeft();
+			BinaryTreeNode right = current.getRight();
+			if( left != null )
+			{ 
+				 q.offer( left );
+			}
+			if( right != null )
+			{ 
+				 q.offer( right );
+			}
+			
+		}
 	}
 }

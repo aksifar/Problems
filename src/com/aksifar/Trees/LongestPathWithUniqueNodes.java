@@ -13,7 +13,7 @@ public class LongestPathWithUniqueNodes {
 	//Stack is used to identify the last iteration of the recursion, so that +1 can be done for root node
 	private Stack<Integer> stack = new Stack<>(); 
 	
-    public int calulateLongestPath(Tree root) {
+    public int calulateLongestPath(BinaryTreeNode root) {
     	if (root == null)
     		return 0;
     	
@@ -43,13 +43,13 @@ public class LongestPathWithUniqueNodes {
     }
     
     public static void main(String[] args) {
-		Tree A = new Tree(4);
-		Tree B = new Tree(5);
-		Tree C = new Tree(6);
-		Tree D = new Tree(4);
-		Tree E = new Tree(1);
-		Tree F = new Tree(6);
-		Tree G = new Tree(5);
+		BinaryTreeNode A = new BinaryTreeNode(4);
+		BinaryTreeNode B = new BinaryTreeNode(5);
+		BinaryTreeNode C = new BinaryTreeNode(6);
+		BinaryTreeNode D = new BinaryTreeNode(4);
+		BinaryTreeNode E = new BinaryTreeNode(1);
+		BinaryTreeNode F = new BinaryTreeNode(6);
+		BinaryTreeNode G = new BinaryTreeNode(5);
 		
 		
 		A.setLeft(B);
