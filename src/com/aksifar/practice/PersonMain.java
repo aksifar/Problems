@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import com.aksifar.Util.PersonUtil;
 import com.aksifar.model.Person;
 
-public class Main1 {
+public class PersonMain {
 	
 	public static void main(String[] args) {
 		
